@@ -9,9 +9,23 @@ import MobileMenu from './MobileMenu'
 const Navbar = () => {
     const navigate = useNavigate()
     const [openMenu, setMenu] = useState(false)
+    const [color, setColor] = useState(false);
+   
+
+    const changeColor = () => {
+      if(window.scrollY >= 70){
+        setColor(true);
+      }else {
+        setColor(false);
+      }
+    }
+
+    
+
+    window.addEventListener('scroll', changeColor)
     
   return (
-    <header className={`h-[72px] fixed w-full z-[99] text-lg font-semibold translate-y-0 ${openMenu ? 'bg-white text-black': 'text-white'}`}>
+    <header className={`h-[72px] fixed w-full z-[99] text-lg font-semibold translate-y-0 ${openMenu || color ? 'bg-white text-black': 'text-white'}`}>
       <nav className='flex justify-between px-4 md:px-8 items-center h-full'>
         <div className='flex items-center'>
           <button className='flex md:hidden mr-2 cursor-pointer transition-all ease-in-out' onClick={() => setMenu(prev => !prev)}>
@@ -31,15 +45,15 @@ const Navbar = () => {
         </ul>
 
         <div className='flex'>
-          <button className='inline-flex items-center mr-3 md:mr-5 rounded-xl md:rounded-lg bg-white/[0.12] backdrop-blur-[10px] p-3 cursor-pointer'>
+          <button className={`inline-flex items-center mr-3 md:mr-5 rounded-xl md:rounded-lg bg-white/[0.12] backdrop-blur-[10px] p-3 cursor-pointer ${color ? 'border' : ''}`}>
             <span className=''>
               <MdWallet size={28}/>
             </span>
-            <span className='hidden md:flex text-white ml-2'>
+            <span className={`hidden md:flex ml-2 ${color ? 'text-black' : 'text-white'}`}>
               Connect wallet
             </span>
           </button>
-          <button className='rounded-xl md:rounded-lg bg-white/[0.12] backdrop-blur-[10px] inline-flex items-center p-3 cursor-pointer ' onClick={() => navigate('/profile')}>
+          <button className={`rounded-xl md:rounded-lg bg-white/[0.12] backdrop-blur-[10px] inline-flex items-center p-3 cursor-pointer ${color ? 'border' : ''}`} onClick={() => navigate('/profile')}>
             <span className=''>
               <IoPersonCircleOutline size={28}/>
             </span>

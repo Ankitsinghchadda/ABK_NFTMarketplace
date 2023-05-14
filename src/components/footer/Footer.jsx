@@ -89,7 +89,7 @@ const Footer = () => {
                         <li>Photography</li>
                     </ul>
                 </div>
-                <div className='flex flex-col items-center md:items-start pt-5 md:pt-0 w-1/2 md:w-[20%] h-1/2 md:h-full'>
+                <div className='flex flex-col items-center md:items-start pt-5 md:pt-0 w-1/2 md:w-[20%] h-1/2 md:h-full text-center md:text-left'>
                 <h3 className='text-lg font-semibold my-2'>MyAccount</h3>
                     <ul>
                         <li>Profile</li>
@@ -100,7 +100,7 @@ const Footer = () => {
                         <li>Settings</li>
                     </ul>
                 </div>
-                <div className='flex flex-col items-center md:items-start pt-5 md:pt-0 w-1/2 md:w-[20%] h-1/2 md:h-full'>
+                <div className='flex flex-col items-center md:items-start pt-5 md:pt-0 w-1/2 md:w-[20%] h-1/2 md:h-full text-center md:text-left'>
                 <h3 className='text-lg font-semibold my-2'>Resources</h3>
                     <ul>
                         <li>Blog</li>
@@ -111,7 +111,7 @@ const Footer = () => {
                         <li>Platform</li>
                     </ul>
                 </div>
-                <div className='flex flex-col items-center md:items-start pt-5 md:pt-0 w-1/2 md:w-[20%] h-1/2 md:h-full'>
+                <div className='flex flex-col items-center md:items-start pt-5 md:pt-0 w-1/2 md:w-[20%] h-1/2 md:h-full text-center md:text-left'>
                 <h3 className='text-lg font-semibold my-2'>Company</h3>
                     <ul>
                         <li>About</li>
