@@ -9,7 +9,7 @@ const Carousel = () => {
         <h2>Top Collector Buys Today</h2>
       </div>
 
-      <div className='flex gap-2 md:gap-4 -mx-5 px-5 overflow-y-hidden py-4'>
+      <div className='flex gap-2 md:gap-4 -mx-5 px-5 overflow-y-hidden py-4 container-snap'>
         {data.map((item) => {
             const {id, img} = item
             return (

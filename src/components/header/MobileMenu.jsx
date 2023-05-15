@@ -1,16 +1,22 @@
 import React from 'react'
 import {BsTwitter, BsInstagram, BsDiscord, BsYoutube, } from 'react-icons/bs'
 import {FaTiktok, FaRedditAlien} from 'react-icons/fa'
+import { useNavigate } from 'react-router-dom'
 
-const MobileMenu = () => {
+const MobileMenu = ({ setMenu }) => {
+    const navigate = useNavigate();
+    const handleNavigate = () => {
+        navigate('/createNFT')
+        setMenu(false)
+    }
   return (
-    <aside className='bg-white text-black h-screen transition-all px-4 z-40'>
+    <aside className='bg-white text-black h-screen w-full sm:w-1/3 transition-all px-4 z-40 shadow-lg'>
         <ul className=''>
-            <li className='h-[72px] flex items-center '>Drops</li>
-            <li className='h-[72px] flex items-center '>Stats</li>
-            <li className='h-[72px] flex items-center '>Resourse</li>
-            <li className='h-[72px] flex items-center '>Create</li>
-            <li className='h-[72px] flex items-center '>NFT wallet pro</li>
+            <li className='h-[72px] flex items-center cursor-pointer'>Drops</li>
+            <li className='h-[72px] flex items-center cursor-pointer'>Stats</li>
+            <li className='h-[72px] flex items-center cursor-pointer'>Resourse</li>
+            <li className='h-[72px] flex items-center cursor-pointer' onClick={handleNavigate} >Create</li>
+            <li className='h-[72px] flex items-center cursor-pointer'>NFT wallet pro</li>
         </ul>
         <button className='h-[60px] bg-blue-500 text-white rounded-lg w-full'>
             Connect Wallet
