@@ -3,11 +3,11 @@ import {BsTwitter, BsInstagram, BsDiscord, BsYoutube, } from 'react-icons/bs'
 import {FaTiktok, FaRedditAlien} from 'react-icons/fa'
 import { useNavigate } from 'react-router-dom'
 
-const MobileMenu = ({ setMenu }) => {
+const MobileMenu = ({ closeMenu }) => {
     const navigate = useNavigate();
     const handleNavigate = () => {
         navigate('/createNFT')
-        setMenu(false)
+        closeMenu();
     }
   return (
     <aside className='bg-white text-black h-screen w-full sm:w-1/3 transition-all px-4 z-40 shadow-lg'>

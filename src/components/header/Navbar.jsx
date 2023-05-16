@@ -30,14 +30,21 @@ const Navbar = () => {
       }
     }, [location])
     
+    window.addEventListener('scroll', changeColor);
 
-    window.addEventListener('scroll', changeColor)
+    const toggleMenu = () => {
+      setMenu(prev => !prev)
+    }
+
+    const closeMenu = () => {
+      setMenu(false);
+    }
     
   return (
     <header className={`h-[72px] fixed w-full z-[99] text-lg font-semibold translate-y-0 ${openMenu || color || page ? 'bg-white text-black shadow-md': 'text-white'}`}>
       <nav className='flex justify-between px-4 md:px-8 items-center h-full'>
         <div className='flex items-center'>
-          <button className='flex lg:hidden mr-2 cursor-pointer transition-all ease-in-out' onClick={() => setMenu(prev => !prev)}>
+          <button className='flex lg:hidden mr-2 cursor-pointer transition-all ease-in-out' onClick={toggleMenu}>
             {openMenu ? <MdClose size={28}/> : <CgMenuLeft size={28}/>}
           </button>
           <div className="cursor-pointer" onClick={() => navigate('/')}>
@@ -69,7 +76,7 @@ const Navbar = () => {
           </button>
         </div>
       </nav>
-      {openMenu && <MobileMenu setMenu={setMenu}/>}
+      {openMenu && <MobileMenu closeMenu={closeMenu}/>}
     </header>
   )
 }
