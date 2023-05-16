@@ -5,7 +5,7 @@ const HeroBanner = () => {
     <div className="h-screen w-full flex items-center relative">
       <div className="w-full h-full absolute top-0 left-0">
         <img
-          src="https://images.unsplash.com/photo-1575444758702-4a6b9222336e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
+          src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
           alt=""
           className="w-full h-full object-cover"
         />
